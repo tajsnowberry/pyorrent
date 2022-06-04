@@ -1,11 +1,22 @@
 import os
+import configparser
+config = configparser.ConfigParser()
 dir_repository = "repository"
-repo_exists = os.path.exists(dir_repository) # Does Repo Exist
 parent_directory = os.getcwd() # Get Current Directory
-if repo_exists == False:
-      print("Repo Doesn't Exist")
-      print(parent_directory)
+if os.path.exists(dir_repository) == False:
+      print("Repository doesn't exist, creating directory...")
       make_repo_path = os.path.join(parent_directory, dir_repository) # Make Repo
-      print(make_repo_path)
+      mode = 0o666 # Set to RW
+      os.mkdir(make_repo_path, mode) # Set to pyorrent/repository
+      if os.path.exists(dir_repository) == True:
+            print("Repository is setup successfully!")
+            pass
+      else:
+            print("false")
+else:
+      print("You already have the repository, passing...")
+      pass
+
+
     
 
