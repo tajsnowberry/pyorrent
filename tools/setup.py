@@ -1,5 +1,3 @@
-import os
-import configparser
 config = configparser.ConfigParser()
 dir_repository = "repository"
 parent_directory = os.getcwd() # Get Current Directory
