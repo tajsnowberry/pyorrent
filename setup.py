@@ -12,7 +12,7 @@ if os.path.exists(dir_repository) == False:
             print("Repository is setup successfully!")
             pass
       else:
-            print("false")
+            print("ABORTED!, unable to create directory.")
 else:
       print("You already have the repository, passing...")
       pass
